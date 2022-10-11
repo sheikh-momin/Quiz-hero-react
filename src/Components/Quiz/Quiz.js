@@ -3,12 +3,12 @@ import { useLoaderData } from 'react-router';
 import CustomQuiz from '../CustomQuiz/CustomQuiz';
 
 const Quiz = () => {
-  const quizes =useLoaderData()
-  console.log(quizes)
+  const quiz =useLoaderData()
+  console.log(quiz.data.questions)
   return (
-    <div>
+    <div className=''>
       {
-        quizes.map(quiz =><CustomQuiz></CustomQuiz>)
+        quiz.data.questions.map(ans => <CustomQuiz key={ans.id} ans={ans}></CustomQuiz>)
       }
     </div>
   );

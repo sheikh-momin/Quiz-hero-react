@@ -11,7 +11,7 @@ const AllQuiz = ({ data }) => {
   return (
     <div className=''>
 
-      <div className='   '>
+      <div className='  '>
         <Card className='bg-secondary' style={{ width: '18rem' }}>
           <Card.Img variant="top" src={logo} />
           <Card.Body>

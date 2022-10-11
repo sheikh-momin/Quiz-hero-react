@@ -7,12 +7,13 @@ const Home = () => {
   const allData =homes.data
   console.log(homes.data)
   return (
-    <div>
-      <h1>This is home: {homes.data.length}</h1>
-      {
-        allData.map(data => <AllQuiz key={allData.id} data={data}></AllQuiz>)
-      }
-      
+    <div className='container'>
+      <div className='row row-cols-4'>
+        {
+          allData.map(data => <AllQuiz key={allData.id} data={data}></AllQuiz>)
+        }
+
+      </div>
     </div>
   );
 };

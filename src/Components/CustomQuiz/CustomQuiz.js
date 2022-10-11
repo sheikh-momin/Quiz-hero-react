@@ -6,8 +6,21 @@ const CustomQuiz = ({ans}) => {
   const { options, question, correctAnswer }=ans
   const [rightAns, setRightAns] =useState('')
   const showAnswer =()=>{
+    
     setRightAns(correctAnswer)
   }
+
+
+
+
+  const handleChange = event => {
+    if (event.target.value === correctAnswer) {
+      alert('Correct Answer')
+    }
+    else {
+      alert('Wrong answer');
+    }
+  };
 
   return (
     <div className='container'>
@@ -18,10 +31,10 @@ const CustomQuiz = ({ans}) => {
         </div>
         
         <div className='d-flex justify-content-center align-center'>
-          <input type="radio" name="radio-3" className="radio radio-secondary d-flex" /><p className='mx-4'>{options[0]}</p>
-          <input type="radio" name="radio-3" className="radio radio-secondary" /><p className='mx-4'>{options[1]}</p>
-          <input type="radio" name="radio-3" className="radio radio-secondary" /><p className='mx-4'>{options[2]}</p>
-          <input type="radio" name="radio-3" className="radio radio-secondary" /><p className='mx-4'>{options[3]}</p>
+          <input onClick={handleChange} value={options[0]}  type="radio" name="radio-3" className="radio radio-secondary d-flex" /><p className='mx-4'>{options[0]}</p>
+          <input onClick={handleChange}  type="radio" value={options[1]} name="radio-3" className="radio radio-secondary" /><p className='mx-4'>{options[1]}</p>
+          <input onClick={handleChange} value={options[2]}  type="radio" name="radio-3" className="radio radio-secondary" /><p className='mx-4'>{options[2]}</p>
+          <input onClick={handleChange} value={options[3]}  type="radio" name="radio-3" className="radio radio-secondary" /><p className='mx-4'>{options[3]}</p>
         </div>
         <div className='text-center mt-5 bg-secondary rounded p-3'>
             <h3>Answer: {rightAns}</h3> 

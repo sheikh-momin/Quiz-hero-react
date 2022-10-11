@@ -4,11 +4,11 @@ import CustomQuiz from '../CustomQuiz/CustomQuiz';
 
 const Quiz = () => {
   const quiz =useLoaderData()
-  console.log(quiz.data.questions)
+
   return (
     <div className=''>
       {
-        quiz.data.questions.map(ans => <CustomQuiz key={ans.id} ans={ans}></CustomQuiz>)
+        quiz.data.questions.map(ans => <CustomQuiz topicName={quiz.data.name} key={ans.id} ans={ans}></CustomQuiz>)
       }
     </div>
   );

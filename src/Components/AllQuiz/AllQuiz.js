@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 
 const AllQuiz = ({ data }) => {
   const { logo, name, total,id } = data
-  console.log(data)
   return (
     <div className=''>
 

@@ -16,16 +16,16 @@ function App() {
       element: <Main></Main>,
       children:[
         {
-          path: 'home', element:<Home></Home>
+          path: '/home', element:<Home></Home>
         },
         {
-          path: 'topics', element:<Topics></Topics>
+          path: '/topics', element:<Topics></Topics>
         },
         {
-          path: 'statistics', element: <Statistics></Statistics>
+          path: '/statistics', element: <Statistics></Statistics>
         },
         {
-          path: 'blog', element:<Blog></Blog>
+          path: '/blog', element:<Blog></Blog>
         },
       ]
     }

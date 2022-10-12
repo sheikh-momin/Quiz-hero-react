@@ -1,5 +1,5 @@
 # Name: Quiz Hero
-# Live Site: 
+# Live Site: https://stupendous-salamander-2ecbc0.netlify.app/home
 1. Use react router
 2. Use Heros icon
 3. Use Bootstrap

@@ -6,7 +6,6 @@ import AllQuiz from '../AllQuiz/AllQuiz';
 const Home = () => {
   const homes =useLoaderData()
   const allData =homes.data
-  console.log(homes.data)
   return (
     <div className='container'>
       <About></About>

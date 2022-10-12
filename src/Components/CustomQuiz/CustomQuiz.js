@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { EyeIcon } from '@heroicons/react/24/solid'
 import './CustomQuiz.css'
+import createUtilityClassName from 'react-bootstrap/esm/createUtilityClasses';
 
-const CustomQuiz = ({ ans }) => {
+const CustomQuiz = ({ ans,  }) => {
   const { options, question, correctAnswer }=ans
   const [rightAns, setRightAns] =useState('')
   const showAnswer =()=>{
@@ -32,10 +33,10 @@ const CustomQuiz = ({ ans }) => {
         </div>
         
         <div className='d-flex justify-content-center align-center'>
-          <input onClick={handleChange} value={options[0]}  type="radio" name="radio-3" className="radio radio-secondary d-flex" /><p className='mx-4'>{options[0]}</p>
-          <input onClick={handleChange}  type="radio" value={options[1]} name="radio-3" className="radio radio-secondary" /><p className='mx-4'>{options[1]}</p>
-          <input onClick={handleChange} value={options[2]}  type="radio" name="radio-3" className="radio radio-secondary" /><p className='mx-4'>{options[2]}</p>
-          <input onClick={handleChange} value={options[3]}  type="radio" name="radio-3" className="radio radio-secondary" /><p className='mx-4'>{options[3]}</p>
+          <input onClick={handleChange} value={options[0]}  type="radio" name="radio-3" className="radio radio-secondary d-flex " /><p className='mx-4 mt-3'>{options[0]}</p>
+          <input onClick={handleChange} type="radio" value={options[1]} name="radio-3" className="radio radio-secondary" /><p className='mx-4 mt-3'>{options[1]}</p>
+          <input onClick={handleChange} value={options[2]} type="radio" name="radio-3" className="radio radio-secondary" /><p className='mx-4 mt-3'>{options[2]}</p>
+          <input onClick={handleChange} value={options[3]} type="radio" name="radio-3" className="radio radio-secondary" /><p className='mx-4 mt-3'>{options[3]}</p>
         </div>
         <div className='text-center text-light mt-5 bg-secondary rounded p-3'>
             <h3>Answer: {rightAns}</h3> 

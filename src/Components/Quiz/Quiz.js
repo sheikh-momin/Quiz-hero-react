@@ -7,8 +7,10 @@ const Quiz = () => {
 
   return (
     <div className=''>
+      <h1>Quiz in {quiz.data.name}</h1>
+      
       {
-        quiz.data.questions.map(ans => <CustomQuiz topicName={quiz.data.name} key={ans.id} ans={ans}></CustomQuiz>)
+        quiz.data.questions.map(ans =>  <CustomQuiz  key={ans.id} ans={ans}></CustomQuiz>)
       }
     </div>
   );

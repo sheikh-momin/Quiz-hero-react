@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { EyeIcon } from '@heroicons/react/24/solid'
 import './CustomQuiz.css'
 
-const CustomQuiz = ({ ans, topicName }) => {
+const CustomQuiz = ({ ans }) => {
   const { options, question, correctAnswer }=ans
   const [rightAns, setRightAns] =useState('')
   const showAnswer =()=>{
@@ -24,7 +24,7 @@ const CustomQuiz = ({ ans, topicName }) => {
 
   return (
     <div className='container'>
-      <div><h1>Quiz in {topicName}</h1></div>
+      
       <div className='border p-3 m-5 rounded shadow'>
         <button class='icon' onClick={showAnswer}><EyeIcon  ></EyeIcon></button>
         <div className='text-danger'>
